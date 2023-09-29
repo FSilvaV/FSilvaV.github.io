@@ -1,32 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <nav>
-    <div class="mi-logo">
-      <img src="Imagenes/logoestrella.svg" alt="logoestrella">
-      <p>Francisco Silva</p>
-    </div>
-    <div class="enlaces-container">
-      <a href="#">Sobre Mi</a>
-      <a href="#">Skills</a>
-      <a href="#">Hobbies</a>
-      <a href="#">Formaciones</a>
-      <a href="#">Proyectos</a>
-      <a href="#">francisco.silva.vergara@gmail.com</a>
-    </div>
-  </nav>
-  <section class="seccion1-container">
-      <div class="seccion1">
-        <div>
-          <h1>Hola, mi nombre es Francisco Silva <br> y creo paginas web</h1>
-        </div>
-      </div>
-  </section>
-  
-</body>
-</html>
+---
+layout: default
+title: {{ site.name }}
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
