@@ -7,8 +7,8 @@ locale:       "es"
 
 # About/contact
 author:
-  name:       Author name
-  url:        http://yourhomepage.com 
+  name:       Francisco Silva
+  url:        https://fsilvav.github.io/
 
 # Gems
 gems:
